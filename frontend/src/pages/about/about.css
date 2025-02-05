@@ -1,0 +1,13 @@
+.about-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.about-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
