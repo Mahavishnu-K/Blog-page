@@ -25,10 +25,17 @@ function Contact() {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        localStorage.setItem("formData", JSON.stringify(formData));
-        alert("Form data submitted");
+        try{
+            const response = await axios.post("http://localhost:4000/api/contact", formData);
+            alert(response.data.message);
+            setFormData({ name: "", email: "", phone: "", message: "" });
+        }catch(err){
+            console.error("Error submitting form", error);
+            alert("Error submitting");
+        }
+        
     };
 
     return(

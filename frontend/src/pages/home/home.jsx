@@ -1,9 +1,7 @@
 import React from "react";
-import { useNavigate } from "react-router";
 import './home.css';
 
 function Home() {
-    const navigate = useNavigate();
     return(
         <>
             <div className="heading">
